@@ -3,8 +3,8 @@
 %table
   %thead
     %tr
-      %th Name
-      %th Model
+      %th Device Type
+      %th Device Model
       %th Sn
       %th Describe
       %th Code number
@@ -30,8 +30,8 @@
   %tbody
     - @hardwares.each do |hardware|
       %tr
-        %td= hardware.name
-        %td= hardware.model
+        %td= hardware.device_type
+        %td= hardware.device_model
         %td= hardware.sn
         %td= hardware.describe
         %td= hardware.code_number

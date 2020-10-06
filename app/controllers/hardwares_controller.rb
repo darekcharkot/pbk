@@ -69,6 +69,6 @@ class HardwaresController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def hardware_params
-      params.require(:hardware).permit(:name, :model, :sn, :describe, :code_number, :purchase_price, :sold, :procesor, :ram, :disk, :screen, :dvd, :video_card, :battery, :operating_system, :warranty, :equipment, :date_of_purchase, :sale_date, :price)
+      params.require(:hardware).permit(:device_type, :device_model, :sn, :describe, :code_number, :purchase_price, :sold, :procesor, :ram, :disk, :screen, :dvd, :video_card, :battery, :operating_system, :warranty, :equipment, :date_of_purchase, :sale_date, :price)
     end
 end

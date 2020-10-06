@@ -2,10 +2,10 @@
 
 %p
   %b Name:
-  = @hardware.name
+  = @hardware.device_type
 %p
   %b Model:
-  = @hardware.model
+  = @hardware.device_model
 %p
   %b Sn:
   = @hardware.sn
@@ -20,7 +20,7 @@
   = @hardware.purchase_price
 %p
   %b Sold:
-  = @hardware.sold
+  = @hardware.sold ? "Tak" : "Nie"
 %p
   %b Procesor:
   = @hardware.procesor
