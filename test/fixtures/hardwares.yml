@@ -1,0 +1,45 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  model: MyString
+  sn: MyString
+  describe: MyString
+  code_number: MyString
+  purchase_price: MyString
+  sold: false
+  procesor: MyString
+  ram: MyString
+  disk: MyString
+  screen: MyString
+  dvd: MyString
+  video_card: MyString
+  battery: MyString
+  operating_system: MyString
+  warranty: MyString
+  equipment: MyString
+  date_of_purchase: 2020-10-06 21:15:56
+  sale_date: 2020-10-06 21:15:56
+  price: MyString
+
+two:
+  name: MyString
+  model: MyString
+  sn: MyString
+  describe: MyString
+  code_number: MyString
+  purchase_price: MyString
+  sold: false
+  procesor: MyString
+  ram: MyString
+  disk: MyString
+  screen: MyString
+  dvd: MyString
+  video_card: MyString
+  battery: MyString
+  operating_system: MyString
+  warranty: MyString
+  equipment: MyString
+  date_of_purchase: 2020-10-06 21:15:56
+  sale_date: 2020-10-06 21:15:56
+  price: MyString

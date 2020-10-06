@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :hardwares
   get 'pages/home'
   get 'pages/hardwares'
   get 'pages/contact'

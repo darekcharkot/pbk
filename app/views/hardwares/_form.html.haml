@@ -1,0 +1,70 @@
+= form_for @hardware do |f|
+  - if @hardware.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@hardware.errors.count, "error")} prohibited this hardware from being saved:"
+      %ul
+        - @hardware.errors.full_messages.each do |message|
+          %li= message
+
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :model
+    = f.text_field :model
+  .field
+    = f.label :sn
+    = f.text_field :sn
+  .field
+    = f.label :describe
+    = f.text_field :describe
+  .field
+    = f.label :code_number
+    = f.text_field :code_number
+  .field
+    = f.label :purchase_price
+    = f.text_field :purchase_price
+  .field
+    = f.label :sold
+    = f.check_box :sold
+  .field
+    = f.label :procesor
+    = f.text_field :procesor
+  .field
+    = f.label :ram
+    = f.text_field :ram
+  .field
+    = f.label :disk
+    = f.text_field :disk
+  .field
+    = f.label :screen
+    = f.text_field :screen
+  .field
+    = f.label :dvd
+    = f.text_field :dvd
+  .field
+    = f.label :video_card
+    = f.text_field :video_card
+  .field
+    = f.label :battery
+    = f.text_field :battery
+  .field
+    = f.label :operating_system
+    = f.text_field :operating_system
+  .field
+    = f.label :warranty
+    = f.text_field :warranty
+  .field
+    = f.label :equipment
+    = f.text_field :equipment
+  .field
+    = f.label :date_of_purchase
+    = f.datetime_select :date_of_purchase
+  .field
+    = f.label :sale_date
+    = f.datetime_select :sale_date
+  .field
+    = f.label :price
+    = f.text_field :price
+  .actions
+    = f.submit 'Save'

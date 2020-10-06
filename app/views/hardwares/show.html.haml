@@ -1,0 +1,66 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @hardware.name
+%p
+  %b Model:
+  = @hardware.model
+%p
+  %b Sn:
+  = @hardware.sn
+%p
+  %b Describe:
+  = @hardware.describe
+%p
+  %b Code number:
+  = @hardware.code_number
+%p
+  %b Purchase price:
+  = @hardware.purchase_price
+%p
+  %b Sold:
+  = @hardware.sold
+%p
+  %b Procesor:
+  = @hardware.procesor
+%p
+  %b Ram:
+  = @hardware.ram
+%p
+  %b Disk:
+  = @hardware.disk
+%p
+  %b Screen:
+  = @hardware.screen
+%p
+  %b Dvd:
+  = @hardware.dvd
+%p
+  %b Video card:
+  = @hardware.video_card
+%p
+  %b Battery:
+  = @hardware.battery
+%p
+  %b Operating system:
+  = @hardware.operating_system
+%p
+  %b Warranty:
+  = @hardware.warranty
+%p
+  %b Equipment:
+  = @hardware.equipment
+%p
+  %b Date of purchase:
+  = @hardware.date_of_purchase
+%p
+  %b Sale date:
+  = @hardware.sale_date
+%p
+  %b Price:
+  = @hardware.price
+
+= link_to 'Edit', edit_hardware_path(@hardware)
+\|
+= link_to 'Back', hardwares_path

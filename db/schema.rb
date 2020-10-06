@@ -10,10 +10,37 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_06_184009) do
+ActiveRecord::Schema.define(version: 2020_10_06_191556) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "hardwares", force: :cascade do |t|
+    t.string "device_type", default: "Laptop", null: false
+    t.string "device_model"
+    t.string "sn"
+    t.string "describe"
+    t.string "code_number"
+    t.string "purchase_price"
+    t.boolean "sold", default: false, null: false
+    t.string "procesor"
+    t.string "ram"
+    t.string "disk"
+    t.string "screen"
+    t.string "dvd"
+    t.string "video_card"
+    t.string "battery", default: "używana"
+    t.string "operating_system"
+    t.string "warranty", default: "3 miesiące"
+    t.string "equipment"
+    t.datetime "date_of_purchase"
+    t.datetime "sale_date"
+    t.string "price"
+    t.text "information_for_us"
+    t.text "information_for_user"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
