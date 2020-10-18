@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+	root 'hardwares#index'
   resources :hardwares
   get 'pages/home'
   get 'pages/hardwares'

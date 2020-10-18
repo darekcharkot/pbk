@@ -5,23 +5,14 @@
     %tr
       %th Device Type
       %th Device Model
-      %th Sn
-      %th Describe
-      %th Code number
       %th Purchase price
       %th Sold
       %th Procesor
       %th Ram
       %th Disk
       %th Screen
-      %th Dvd
       %th Video card
-      %th Battery
       %th Operating system
-      %th Warranty
-      %th Equipment
-      %th Date of purchase
-      %th Sale date
       %th Price
       %th
       %th
@@ -32,23 +23,21 @@
       %tr
         %td= hardware.device_type
         %td= hardware.device_model
-        %td= hardware.sn
-        %td= hardware.describe
-        %td= hardware.code_number
         %td= hardware.purchase_price
-        %td= hardware.sold
+        -if hardware.sold
+          %td 
+            %span{:style => "color: green;"}
+              %i.fas.fa-check
+        -else 
+          %td
+            %span{:style => "color: red;"}
+              %i.fas.fa-times  
         %td= hardware.procesor
         %td= hardware.ram
         %td= hardware.disk
         %td= hardware.screen
-        %td= hardware.dvd
         %td= hardware.video_card
-        %td= hardware.battery
         %td= hardware.operating_system
-        %td= hardware.warranty
-        %td= hardware.equipment
-        %td= hardware.date_of_purchase
-        %td= hardware.sale_date
         %td= hardware.price
         %td= link_to 'Show', hardware
         %td= link_to 'Edit', edit_hardware_path(hardware)

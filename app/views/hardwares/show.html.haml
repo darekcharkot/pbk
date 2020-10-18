@@ -20,7 +20,14 @@
   = @hardware.purchase_price
 %p
   %b Sold:
-  = @hardware.sold ? "Tak" : "Nie"
+  -if @hardware.sold
+    %td 
+      %span{:style => "color: green;"}
+        %i.fas.fa-check
+  -else 
+    %td
+      %span{:style => "color: red;"}
+        %i.fas.fa-times
 %p
   %b Procesor:
   = @hardware.procesor
@@ -53,10 +60,15 @@
   = @hardware.equipment
 %p
   %b Date of purchase:
-  = @hardware.date_of_purchase
-%p
-  %b Sale date:
-  = @hardware.sale_date
+  = @hardware.date_of_purchase.strftime("%d-%m-%Y")
+-if @hardware.sold
+  %p
+    %b Sale date:
+    = @hardware.sale_date.strftime("%d-%m-%Y")
+-else
+  %p
+    %b Sale date:
+    \--
 %p
   %b Price:
   = @hardware.price

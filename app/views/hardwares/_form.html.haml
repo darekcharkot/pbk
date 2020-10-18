@@ -1,10 +1,16 @@
-= form_for @hardware do |f|
-  - if @hardware.errors.any?
-    #error_explanation
-      %h2= "#{pluralize(@hardware.errors.count, "error")} prohibited this hardware from being saved:"
-      %ul
-        - @hardware.errors.full_messages.each do |message|
-          %li= message
+/ = form_for @hardware do |f|
+/   - if @hardware.errors.any?
+/     #error_explanation
+/       %h2= "#{pluralize(@hardware.errors.count, "error")} prohibited this hardware from being saved:"
+/       %ul
+/         - @hardware.errors.full_messages.each do |message|
+/           %li= message
+
+
+
+= simple_form_for @hardware do |f|
+  = f.error_notification
+  = f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present?
 
   .field
     = f.label :device_type
@@ -59,10 +65,11 @@
     = f.text_field :equipment
   .field
     = f.label :date_of_purchase
-    = f.datetime_select :date_of_purchase
-  .field
-    = f.label :sale_date
-    = f.datetime_select :sale_date
+    = f.date_select :date_of_purchase
+  -if @hardware.sold
+    .field
+      = f.label :sale_date
+      = f.date_select :sale_date
   .field
     = f.label :price
     = f.text_field :price
