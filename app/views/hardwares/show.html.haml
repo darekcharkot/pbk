@@ -60,15 +60,11 @@
   = @hardware.equipment
 %p
   %b Date of purchase:
-  = @hardware.date_of_purchase.strftime("%d-%m-%Y")
+  = @hardware.date_of_purchase.strftime("%Y-%m-%d")
 -if @hardware.sold
   %p
     %b Sale date:
-    = @hardware.sale_date.strftime("%d-%m-%Y")
--else
-  %p
-    %b Sale date:
-    \--
+    = @hardware.sale_date.strftime("%Y-%m-%d")
 %p
   %b Price:
   = @hardware.price
