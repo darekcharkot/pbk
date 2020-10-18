@@ -1,5 +1,6 @@
 class HardwaresController < ApplicationController
   before_action :set_hardware, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:new, :edit, :update, :destroy]
 
   # GET /hardwares
   # GET /hardwares.json
