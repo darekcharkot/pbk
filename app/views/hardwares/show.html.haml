@@ -1,79 +1,150 @@
-%p#notice= notice
-
-%p
-  %b Name:
-  = @hardware.device_type
-%p
-  %b Model:
-  = @hardware.device_model
-%p
-  %b Sn:
-  = @hardware.sn
-%p
-  %b Describe:
-  = @hardware.describe
-%p
-  %b Code number:
-  = @hardware.code_number
-%p
-  %b Purchase price:
-  = @hardware.purchase_price
-%p
-  %b Sold:
-  -if @hardware.sold
-    %td 
-      %span{:style => "color: green;"}
-        %i.fas.fa-check
-  -else 
-    %td
-      %span{:style => "color: red;"}
-        %i.fas.fa-times
-%p
-  %b Procesor:
-  = @hardware.procesor
-%p
-  %b Ram:
-  = @hardware.ram
-%p
-  %b Disk:
-  = @hardware.disk
-%p
-  %b Screen:
-  = @hardware.screen
-%p
-  %b Dvd:
-  = @hardware.dvd
-%p
-  %b Video card:
-  = @hardware.video_card
-%p
-  %b Battery:
-  = @hardware.battery
-%p
-  %b Operating system:
-  = @hardware.operating_system
-%p
-  %b Warranty:
-  = @hardware.warranty
-%p
-  %b Equipment:
-  = @hardware.equipment
-%p
-  %b Date of purchase:
-  = @hardware.date_of_purchase.strftime("%Y-%m-%d")
--if @hardware.sale_date? && @hardware.sold
-  %p
-    %b Sale date:
-    = @hardware.sale_date.strftime("%Y-%m-%d")
-%p
-  %b Price:
-  = @hardware.price
-%p
-  %b Information for us:
-  = @hardware.information_for_us
-%p
-  %b Information for user:
-  = @hardware.information_for_user
+.card
+  %p#notice= notice
+  .card-body
+    .row
+      .col-md-6
+        %p
+          .row
+            .col-md-3
+              %b Name:
+            .col-md-9  
+              = @hardware.device_type
+        %p
+          .row
+            .col-md-3
+              %b Model:
+            .col-md-9  
+              = @hardware.device_model
+        %p
+          .row
+            .col-md-3
+              %b Sn:
+            .col-md-9  
+              = @hardware.sn
+        %p
+          .row
+            .col-md-3
+              %b Describe:
+            .col-md-9  
+              = @hardware.describe
+        %p
+          .row
+            .col-md-3
+              %b Code number:
+            .col-md-9  
+              = @hardware.code_number
+        %p
+          .row
+            .col-md-3
+              %b Purchase price:
+            .col-md-9  
+              = @hardware.purchase_price
+        %p
+          .row
+            .col-md-3
+              %b Date of purchase:
+            .col-md-9  
+              = @hardware.date_of_purchase.strftime("%Y-%m-%d")
+        %p
+          .row
+            .col-md-3
+              %b Sold:
+            .col-md-9  
+              -if @hardware.sold
+                %td 
+                  %span{:style => "color: green;"}
+                    %i.fas.fa-check
+              -else 
+                %td
+                  %span{:style => "color: red;"}
+                    %i.fas.fa-times
+        -if @hardware.sale_date? && @hardware.sold
+          %p
+            .row
+              .col-md-3
+                %b Sale date:
+              .col-md-9  
+                = @hardware.sale_date.strftime("%Y-%m-%d")
+        %p
+          .row
+            .col-md-3
+              %b Price:
+            .col-md-9  
+              = @hardware.price
+      .col-md-6
+        %p
+          .row
+            .col-md-3
+              %b Procesor:
+            .col-md-9  
+              = @hardware.procesor
+        %p
+          .row
+            .col-md-3
+              %b Ram:
+            .col-md-9  
+              = @hardware.ram
+        %p
+          .row
+            .col-md-3
+              %b Disk:
+            .col-md-9  
+              = @hardware.disk
+        %p
+          .row
+            .col-md-3
+              %b Screen:
+            .col-md-9  
+              = @hardware.screen
+        %p
+          .row
+            .col-md-3
+              %b Dvd:
+            .col-md-9  
+              = @hardware.dvd
+        %p
+          .row
+            .col-md-3
+              %b Video card:
+            .col-md-9  
+              = @hardware.video_card
+        %p
+          .row
+            .col-md-3
+              %b Battery:
+            .col-md-9  
+              = @hardware.battery
+        %p
+          .row
+            .col-md-3
+              %b Operating system:
+            .col-md-9  
+              = @hardware.operating_system
+        %p
+          .row
+            .col-md-3
+              %b Warranty:
+            .col-md-9  
+              = @hardware.warranty
+        %p
+          .row
+            .col-md-3
+              %b Equipment:
+            .col-md-9  
+              = @hardware.equipment
+  .card-footer
+    %p
+      .row
+        .col-md-3
+          %b Information for us:
+        .col-md-9  
+          = @hardware.information_for_us
+    %p
+      .row
+        .col-md-3
+          %b Information for user:
+        .col-md-9  
+          = @hardware.information_for_user
 
 = link_to 'Edit', edit_hardware_path(@hardware)
 \|
