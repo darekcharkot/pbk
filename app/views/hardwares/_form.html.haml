@@ -53,6 +53,9 @@
   .field
     = f.label :date_of_purchase
     = f.date_select :date_of_purchase
+  .field
+    = f.label :sold
+    = f.check_box :sold
   -if @hardware.sold
     .field
       = f.label :sale_date
