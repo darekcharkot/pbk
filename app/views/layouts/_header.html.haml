@@ -5,11 +5,12 @@
   #navbarSupportedContent.collapse.navbar-collapse
     %ul.navbar-nav.mr-auto
       %li.nav-item.active
-        %a.nav-link{:href => "#"}
-          Home
+        .nav-link
+          = link_to 'Home', pages_home_path
           %span.sr-only (current)
       %li.nav-item
-        %a.nav-link{:href => "#"} Link
+        .nav-link
+          = link_to 'Hardwares', hardwares_path
       %li.nav-item.dropdown
         %a#navbarDropdown.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
           Dropdown
