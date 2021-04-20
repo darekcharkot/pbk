@@ -1,0 +1,38 @@
+pl:
+  device_type: "Typ urządzenia"
+  device_model: "Model urządzenia"
+  sn: "Nr seryjny"
+  describe: "Porty i złącza"
+  code_number: "Kod własny"
+  purchase_price: "Cena zakupu"
+  proof: "Dokument zakupu"
+  procesor: "Procesor"
+  ram: "Pamięć RAM"
+  disk: "Dysk"
+  screen: "Matryca"
+  dvd: "Napęd DVD"
+  video_card: "Karta graficzna"
+  battery: "Bateria"
+  operating_system: "System operacyjny"
+  warranty: "Gwarancja"
+  equipment: "Wyposażenie"
+  date_of_purchase: "Data zakupu"
+  sold: "Sprzedany?"
+  sale_date: "Data sprzedaży"
+  describe: "Dodatkowe informacje"
+  price: "Cena sprzedaży"
+  information_for_us: "Informacja tylko dla nas"
+  information_for_user: "Informacja dla użytkownika"
+  image: "Zdjęcia"
+  Choose Files: "Wybierz pliki"
+
+  time:
+    formats:
+      default: "%d/%m/%Y"
+
+
+  date:
+    order:
+      - :day
+      - :month
+      - :year

@@ -1,7 +1,5 @@
-en:
+pl:
   simple_form:
-    "yes": 'Yes'
-    "no": 'No'
     "Editing hardware": 'Edytuj sprzęt'
     required:
       text: 'required'
@@ -10,7 +8,7 @@ en:
       # When using html, text and mark won't be used.
       # html: '<abbr title="required">*</abbr>'
     error_notification:
-      default_message: "Please review the problems below:"
+      default_message: "Sprawdź problem pojawiający się poniżej:"
     # Examples
     # labels:
     #   defaults:

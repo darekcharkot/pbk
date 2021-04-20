@@ -3,71 +3,71 @@
   = f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present?
 
   .field
-    = f.label :device_type
+    = f.label t :device_type
     = f.text_field :device_type
   .field
-    = f.label :device_model
+    = f.label t :device_model
     = f.text_field :device_model
   .field
-    = f.label :sn
+    = f.label t :sn
     = f.text_field :sn
   .field
-    = f.label :describe
+    = f.label t :describe
     = f.text_field :describe
   .field
-    = f.label :code_number
+    = f.label t :code_number
     = f.text_field :code_number
   .field
-    = f.label :purchase_price
+    = f.label t :purchase_price
     = f.text_field :purchase_price
   .field
-    = f.label :procesor
+    = f.label t :procesor
     = f.text_field :procesor
   .field
-    = f.label :ram
+    = f.label t :ram
     = f.text_field :ram
   .field
-    = f.label :disk
+    = f.label t :disk
     = f.text_field :disk
   .field
-    = f.label :screen
+    = f.label t :screen
     = f.text_field :screen
   .field
-    = f.label :dvd
+    = f.label t :dvd
     = f.text_field :dvd
   .field
-    = f.label :video_card
+    = f.label t :video_card
     = f.text_field :video_card
   .field
-    = f.label :battery
+    = f.label t :battery
     = f.text_field :battery
   .field
-    = f.label :operating_system
+    = f.label t :operating_system
     = f.text_field :operating_system
   .field
-    = f.label :warranty
+    = f.label t :warranty
     = f.text_field :warranty
   .field
-    = f.label :equipment
+    = f.label t :equipment
     = f.text_field :equipment
   .field
-    = f.label :date_of_purchase
+    = f.label t :date_of_purchase
     = f.date_select :date_of_purchase
   .field
-    = f.label :sold
+    = f.label t :sold
     = f.check_box :sold
   -if @hardware.sold
     .field
-      = f.label :sale_date
+      = f.label t :sale_date
       = f.date_select :sale_date
   .field
-    = f.label :price
+    = f.label t :price
     = f.text_field :price
   .field
-    = f.label :information_for_us
+    = f.label t :information_for_us
     = f.rich_text_area :information_for_us
   .field
-    = f.label :information_for_user
+    = f.label t :information_for_user
     = f.rich_text_area :information_for_user
   .actions
-    = f.submit 'Save'
+    = f.submit 'Zapisz'
