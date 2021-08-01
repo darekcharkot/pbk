@@ -3,6 +3,14 @@
   = f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present?
 
   .field
+    = f.label "Załaduj piki:"
+  %br
+    = f.file_field :main_image
+  .field
+    = f.file_field :thumb_image
+  %br
+  %br
+  .field
     = f.label t :device_type
     = f.text_field :device_type
   .field

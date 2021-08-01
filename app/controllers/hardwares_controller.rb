@@ -30,10 +30,8 @@ class HardwaresController < ApplicationController
     respond_to do |format|
       if @hardware.save
         format.html { redirect_to @hardware, notice: 'Hardware was successfully created.' }
-        format.json { render :show, status: :created, location: @hardware }
       else
         format.html { render :new }
-        format.json { render json: @hardware.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -70,6 +68,10 @@ class HardwaresController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def hardware_params
-      params.require(:hardware).permit(:device_type, :device_model, :sn, :describe, :code_number, :purchase_price, :sold, :procesor, :ram, :disk, :screen, :dvd, :video_card, :battery, :operating_system, :warranty, :equipment, :date_of_purchase, :sale_date, :price, :information_for_us, :information_for_user)
+      params.require(:hardware).permit(:device_type, :device_model, :sn, :describe, :code_number,
+                                       :purchase_price, :sold, :procesor, :ram, :disk, :screen, :dvd,
+                                       :video_card, :battery, :operating_system, :warranty, :equipment,
+                                       :date_of_purchase, :sale_date, :price, :information_for_us,
+                                       :information_for_user, :main_image, :thumb_image)
     end
 end
