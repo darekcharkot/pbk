@@ -6,6 +6,7 @@ class HardwaresController < ApplicationController
   # GET /hardwares.json
   def index
     @hardwares = Hardware.all
+    @hardwares_forsale = Hardware.where(:sold => false)
   end
 
   # GET /hardwares/1

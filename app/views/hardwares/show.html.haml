@@ -3,7 +3,7 @@
   .card-body
     .row
       .col-md-3.center
-        = image_tag @hardware.thumb_image.url, width: '320px'
+        = image_tag @hardware.main_image.url, width: '320px' unless @hardware.main_image.url.nil?
       .col-md-9.bigtext.font-lucida{:style => "font-size: 3.625rem; text-decoration: underline;"}
         = @hardware.device_type + ' ' + @hardware.device_model
     .row

@@ -1,26 +1,29 @@
-%h1 Listing hardwares
+.margin-top-25
+%h6= "Liczba urządzeń w sprzedaży: #{@hardwares_forsale.count}"
+%br
+= link_to 'Dodaj nowe urządzenie', new_hardware_path, method: :get, class: 'btn btn-success btn-lg add_hardware_button'
 
-%table
-  %thead
+%table.table.table-inverse.table-striped.table-hover.text-center.table-responsive-lg
+  %thead.thead-dark
     %tr
-      %th Device Type
-      %th Device Model
-      %th Purchase price
-      %th Sold
+      %th
+      %th Typ urządzenia
+      %th Model urządzenia
+      %th Cena zakupu
+      %th Sprzedany?
       %th Procesor
       %th Ram
-      %th Disk
-      %th Screen
-      %th Video card
-      %th Operating system
-      %th Price
-      %th
-      %th
-      %th
+      %th Dysk
+      %th Wyświetlacz
+      %th Karta graficzna
+      %th System operacyjny
+      %th Cena sprzedaży
+      %th{:colspan => "3"} Co chcesz zrobić?
 
   %tbody
     - @hardwares.each do |hardware|
       %tr
+        %td= image_tag(hardware.thumb_image.url, width: '80px') unless hardware.thumb_image.url.nil?
         %td= hardware.device_type
         %td= hardware.device_model
         %td= hardware.purchase_price
@@ -39,10 +42,10 @@
         %td= hardware.video_card
         %td= hardware.operating_system
         %td= hardware.price
-        %td= link_to 'Show', hardware
-        %td= link_to 'Edit', edit_hardware_path(hardware)
-        %td= link_to 'Destroy', hardware, method: :delete, data: { confirm: 'Are you sure?' }
+        %td= link_to 'Pokaż', hardware, method: :get, class: 'btn btn-info btn-xm action_color'
+        %td= link_to 'Edytuj', edit_hardware_path(hardware), method: :get, class: 'btn btn-warning btn-xm action_color'
+        %td= link_to 'Usuń', hardware, method: :delete, data: { confirm: 'Jesteś pewien?' }, class: 'btn btn-danger btn-xm action_color'
 
 %br
 
-= link_to 'New Hardware', new_hardware_path
+= link_to 'Dodaj nowe urządzenie', new_hardware_path, method: :get, class: 'btn btn-success btn-lg add_hardware_button'

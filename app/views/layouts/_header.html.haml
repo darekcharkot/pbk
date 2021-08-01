@@ -6,33 +6,35 @@
     %ul.navbar-nav.mr-auto
       %li.nav-item.active
         .nav-link
-          = link_to 'Home', pages_home_path
+          = link_to 'Start', pages_home_path
           %span.sr-only (current)
       %li.nav-item
         .nav-link
-          = link_to 'Hardwares', hardwares_path
+          = link_to 'Urządzenia', hardwares_path
       %li.nav-item.dropdown
         %a#navbarDropdown.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
-          Dropdown
+          Oferta
         .dropdown-menu{"aria-labelledby" => "navbarDropdown"}
-          %a.dropdown-item{:href => "#"} Action
-          %a.dropdown-item{:href => "#"} Another action
+          %a.dropdown-item{:href => "#"} Internet szerokopasmowy
+          %a.dropdown-item{:href => "#"} Internet światłowodowy
           .dropdown-divider
-          %a.dropdown-item{:href => "#"} Something else here
-      %li.nav-item
-        %a.nav-link.disabled{:href => "#"} Disabled
+          %a.dropdown-item{:href => "#"} Systemy monitoringu
+          %a.dropdown-item{:href => "#"} Systemy alarmowe
+          %a.dropdown-item{:href => "#"} Domofony / Wideodomofony
+          .dropdown-divider
+          %a.dropdown-item{:href => "#"} Serwis sprzętu komputerowego
+          .dropdown-divider
+          %a.dropdown-item{:href => "#"} Cennik usług
+      %li.nav-item.active
+        .nav-link
+          = link_to 'Kontakt', pages_contact_path
     %form.form-inline.my-2.my-lg-0
-      %input.form-control.mr-sm-2{"aria-label" => "Search", :placeholder => "Search", :type => "search"}/
-      %button.btn.btn-outline-success.my-2.my-sm-0{:type => "submit"} Search
-
-
-
-
-
-- if current_user
-  = current_user.email
-  = link_to 'Account settings', edit_user_registration_path
-  = link_to 'Sign out', destroy_user_session_path, method: :delete
-- else
-  = link_to 'Sign Up', new_user_registration_path
-  = link_to 'Log In', new_user_session_path
+      %input.form-control.mr-sm-2{"aria-label" => "Search", :placeholder => "Szukaj", :type => "search"}/
+      %button.btn.btn-outline-success.my-2.my-sm-0{:type => "submit"} Szukaj
+      - if current_user
+        = current_user.email
+        = link_to 'Account settings', edit_user_registration_path
+        = link_to 'Sign out', destroy_user_session_path, method: :delete
+      - else
+        = link_to 'Sign Up', new_user_registration_path
+        = link_to 'Log In', new_user_session_path
