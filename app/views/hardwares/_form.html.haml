@@ -11,6 +11,22 @@
   %br
   %br
   .field
+    = f.label "Załaduj wiele zdjęć:"
+  %br
+  .field
+  / .row
+  /   .col-md-12
+  /     = f.fields_for :image do |ff|
+  /       .field
+  /         = ff.label t :image
+  /         %br/
+  /         = ff.hidden_field :image_cache
+  /         = ff.file_field :image, multiple: true, name: "images[]"
+  /         %b
+  /         - @hardware.images.each do |image|
+  /           = image_tag image.image_url(:hardwares_image)
+  /           %h5= link_to "Delete", image_path(image), :method => :delete    
+  .field
     = f.label t :device_type
     = f.text_field :device_type
   .field
