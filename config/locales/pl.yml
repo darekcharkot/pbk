@@ -24,7 +24,8 @@ pl:
   information_for_us: "Informacja tylko dla nas"
   information_for_user: "Informacja dla użytkownika"
   image: "Zdjęcia"
-  Choose Files: "Wybierz pliki"
+  Choose File: "Wybierz plik"
+  No file chosen: "Nie wybrałeś pliku"
 
   time:
     formats:
