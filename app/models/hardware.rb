@@ -1,6 +1,6 @@
 class Hardware < ApplicationRecord
-	has_rich_text :information_for_us
-	has_rich_text :information_for_user
+	# has_rich_text :information_for_us
+	# has_rich_text :information_for_user
 
 	include Placeholder
 	# validates_presence_of :main_image, :thumb_image
