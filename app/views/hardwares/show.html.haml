@@ -7,7 +7,7 @@
       .col-md-9.bigtext.font-lucida{:style => "font-size: 3.625rem; text-decoration: underline;"}
         = @hardware.device_type + ' ' + @hardware.device_model
     .row
-      .col-md-4
+      .col-md-6
         / %p
         /   .row
         /     .col-md-12
@@ -26,39 +26,39 @@
         /       = @hardware.device_model
         %p
           .row
-            .col-md-3
-              %b Sn:
-            .col-md-9  
+            .col-md-3.p-2
+              %b Numer seryjny:
+            .col-md-7.shadow.bg-white.rounded.p-2
               = @hardware.sn
         %p
           .row
-            .col-md-3
-              %b Describe:
-            .col-md-9  
+            .col-md-3.p-2
+              %b Opis:
+            .col-md-7.shadow.bg-white.rounded.p-2 
               = @hardware.describe
         %p
           .row
-            .col-md-3
-              %b Code number:
-            .col-md-9  
+            .col-md-3.p-2
+              %b Kod urządzenia:
+            .col-md-7.shadow.bg-white.rounded.p-2 
               = @hardware.code_number
         %p
           .row
-            .col-md-3
-              %b Purchase price:
-            .col-md-9  
+            .col-md-3.p-2
+              %b Cena zakupu:
+            .col-md-7.shadow.bg-white.rounded.p-2 
               = @hardware.purchase_price
         %p
           .row
-            .col-md-3
-              %b Date of purchase:
-            .col-md-9  
+            .col-md-3.p-2
+              %b Data zakupu:
+            .col-md-7.shadow.bg-white.rounded.p-2 
               = @hardware.date_of_purchase.strftime("%Y-%m-%d")
         %p
           .row
-            .col-md-3
-              %b Sold:
-            .col-md-9  
+            .col-md-3.p-2
+              %b Czy sprzedany:
+            .col-md-7.p-2 
               -if @hardware.sold
                 %td 
                   %span{:style => "color: green;"}
@@ -70,91 +70,91 @@
         -if @hardware.sale_date? && @hardware.sold
           %p
             .row
-              .col-md-3
-                %b Sale date:
-              .col-md-9  
+              .col-md-3.p-2
+                %b Data sprzedaży:
+              .col-md-7.shadow.bg-white.rounded.p-2 
                 = @hardware.sale_date.strftime("%Y-%m-%d")
         %p
           .row
-            .col-md-3
-              %b Price:
-            .col-md-9  
+            .col-md-3.p-2
+              %b Cena:
+            .col-md-3.shadow.bg-white.rounded.p-2 
               = @hardware.price
-      .col-md-4
+      .col-md-6
         %p
           .row
-            .col-md-3
+            .col-md-3.p-2
               %b Procesor:
-            .col-md-9  
+            .col-md-7.shadow.bg-white.rounded.p-2 
               = @hardware.procesor
         %p
           .row
-            .col-md-3
-              %b Ram:
-            .col-md-9  
+            .col-md-3.p-2.p-2
+              %b Ilość pamięci RAM:
+            .col-md-7.shadow.bg-white.rounded.p-2
               = @hardware.ram
         %p
           .row
-            .col-md-3
-              %b Disk:
-            .col-md-9  
+            .col-md-3.p-2
+              %b Dysk:
+            .col-md-7.shadow.bg-white.rounded.p-2 
               = @hardware.disk
         %p
           .row
-            .col-md-3
-              %b Screen:
-            .col-md-9  
+            .col-md-3.p-2
+              %b Matryca:
+            .col-md-7.shadow.bg-white.rounded.p-2 
               = @hardware.screen
         %p
           .row
-            .col-md-3
-              %b Dvd:
-            .col-md-9  
+            .col-md-3.p-2
+              %b Napęd DVD:
+            .col-md-7.shadow.bg-white.rounded.p-2 
               = @hardware.dvd
         %p
           .row
-            .col-md-3
-              %b Video card:
-            .col-md-9  
+            .col-md-3.p-2
+              %b Karta graficzna:
+            .col-md-7.shadow.bg-white.rounded.p-2 
               = @hardware.video_card
         %p
           .row
-            .col-md-3
-              %b Battery:
-            .col-md-9  
+            .col-md-3.p-2
+              %b Bateria:
+            .col-md-7.shadow.bg-white.rounded.p-2 
               = @hardware.battery
         %p
           .row
-            .col-md-3
-              %b Operating system:
-            .col-md-9  
+            .col-md-3.p-2
+              %b System operacyjny:
+            .col-md-7.shadow.bg-white.rounded.p-2 
               = @hardware.operating_system
         %p
           .row
-            .col-md-3
-              %b Warranty:
-            .col-md-9  
+            .col-md-3.p-2
+              %b Gwarancja:
+            .col-md-7.shadow.bg-white.rounded.p-2 
               = @hardware.warranty
         %p
           .row
-            .col-md-3
-              %b Equipment:
-            .col-md-9  
+            .col-md-3.p-2
+              %b Wyposażenie:
+            .col-md-7.shadow.bg-white.rounded.p-2 
               = @hardware.equipment
   .card-footer
     %p
       .row
-        .col-md-3
-          %b Information for us:
-        .col-md-9  
+        .col-md-3.p-2
+          %b Informacja tylko dla sprzedającego:
+        .col-md-6.shadow.bg-white.rounded.p-2 
           = @hardware.information_for_us
     %p
       .row
-        .col-md-3
-          %b Information for user:
-        .col-md-9  
+        .col-md-3.p-2
+          %b Informacje dla użytkownika:
+        .col-md-6.shadow.bg-white.rounded.p-2 
           = @hardware.information_for_user
 
-= link_to 'Edit', edit_hardware_path(@hardware)
+= link_to 'Edytuj', edit_hardware_path(@hardware)
 \|
-= link_to 'Back', hardwares_path
+= link_to 'Powrót do listy urządzeń', hardwares_path
